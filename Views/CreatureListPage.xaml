@@ -5,8 +5,13 @@
              xmlns:local="clr-namespace:HybridMobileGame"
              x:Class="HybridMobileGame.Views.CreatureListPage"
              x:DataType="vm:CreatureListViewModel"
-             Title="Creature List Page"
+             Title="Creature List"
              BindingContext="{x:Static local:App.MainViewModel}">
+    <StackLayout>
+    
+    <Button Text="Add Item"
+            Clicked="Add_Button_Clicked"/>
+
     <ListView ItemsSource="{Binding Creatures}"
               SelectedItem="{Binding SelectedCreature, Mode=OneWayToSource}"
               Margin="10"
@@ -27,5 +32,6 @@
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-              
+        
+    </StackLayout>
 </ContentPage>

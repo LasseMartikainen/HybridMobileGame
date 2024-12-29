@@ -31,4 +31,9 @@ public partial class CreatureListPage : ContentPage
 		//Call the actual deleting method.
 		App.MainViewModel.DeleteCreature(creature);
     }
+
+    private async void Add_Button_Clicked(object sender, EventArgs e)
+    {
+		await Navigation.PushAsync(new Views.AddCreaturePage());
+    }
 }

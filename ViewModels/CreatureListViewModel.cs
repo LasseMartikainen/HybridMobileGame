@@ -34,5 +34,7 @@ namespace HybridMobileGame.ViewModels
         }
 
         public void DeleteCreature(CreatureViewModel creature) => Creatures.Remove(creature);
+
+        public void AddCreature(CreatureViewModel newCreature) => Creatures.Add(newCreature);
     }
 }
