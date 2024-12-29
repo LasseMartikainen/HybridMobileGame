@@ -11,8 +11,6 @@ namespace HybridMobileGame.ViewModels
 {
     public class CreatureListViewModel:ObservableObject
     {
-        CreatureDatabase creatureDatabase = new CreatureDatabase();
-
         private CreatureViewModel selectedCreature;
 
         public CreatureViewModel SelectedCreature
@@ -27,7 +25,7 @@ namespace HybridMobileGame.ViewModels
 
         public async Task RefreshCreatures()
         {
-            Creature[] creaturesData = creatureDatabase.GetCreatures();
+            IEnumerable<Models.Creature> creaturesData = await Models.CreatureDatabase.GetCreatures();
 
             foreach (Creature creature in creaturesData)
             {

@@ -1,0 +1,22 @@
+﻿[
+  {
+    "Id": 1,
+    "Name": "Human",
+    "ImagePath": "archer.jpg"
+  },
+  {
+    "Id": 2,
+    "Name": "Goblins",
+    "ImagePath": "goblins.png"
+  },
+  {
+    "Id": 3,
+    "Name": "Orc",
+    "ImagePath": "orc.png"
+  },
+  {
+    "Id": 4,
+    "Name": "Dragon",
+    "ImagePath": "dragon.png"
+  }
+]

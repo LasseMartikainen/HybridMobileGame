@@ -40,7 +40,7 @@
 
 	<ItemGroup>
 		<!-- App Icon -->
-		<MauiIcon Include="Resources\AppIcon\creatureface.svg"/>
+		<MauiIcon Include="Resources\AppIcon\creatureface.svg" />
 
 		<!-- Splash Screen -->
 		<MauiSplashScreen Include="Resources\AppIcon\creatureface.svg">
@@ -62,6 +62,11 @@
 	<ItemGroup>
 	  <None Remove="Resources\AppIcon\creatureface.svg" />
 	  <None Remove="Resources\Fonts\LeftHandLeftPin.ttf" />
+	  <None Remove="Resources\Images\archer.jpg" />
+	  <None Remove="Resources\Images\dragon.png" />
+	  <None Remove="Resources\Images\goblins.png" />
+	  <None Remove="Resources\Images\orc.png" />
+	  <None Remove="Resources\Raw\data.json" />
 	</ItemGroup>
 
 	<ItemGroup>

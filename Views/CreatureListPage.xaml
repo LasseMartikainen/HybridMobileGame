@@ -5,19 +5,25 @@
              xmlns:local="clr-namespace:HybridMobileGame"
              x:Class="HybridMobileGame.Views.CreatureListPage"
              x:DataType="vm:CreatureListViewModel"
-             Title="CreatureListPage"
+             Title="Creature List Page"
              BindingContext="{x:Static local:App.MainViewModel}">
     <ListView ItemsSource="{Binding Creatures}"
               SelectedItem="{Binding SelectedCreature, Mode=OneWayToSource}"
               Margin="10"
+              BackgroundColor="DarkMagenta"
               ItemTapped="ListView_ItemTapped">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Name}" x:DataType="vm:CreatureViewModel">
-                    <TextCell.ContextActions>
+                <ViewCell x:DataType="vm:CreatureViewModel">
+                    <Label Text="{Binding Name}"
+                           FontFamily="LPin"
+                           TextColor="White"
+                           FontSize="18" 
+                           Margin="10"/>
+                    <ViewCell.ContextActions>
                         <MenuItem Text="Delete" IsDestructive="True" Clicked="MenuItem_Clicked" />
-                    </TextCell.ContextActions>
-                </TextCell>
+                    </ViewCell.ContextActions>
+                </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

@@ -6,6 +6,6 @@ using System.Threading.Tasks;
 
 namespace HybridMobileGame.Models
 {
-public record Creature(int Id, string Name);
+public record Creature(int Id, string Name, string ImagePath);
 
 }

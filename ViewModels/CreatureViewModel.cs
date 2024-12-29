@@ -14,6 +14,7 @@ namespace HybridMobileGame.ViewModels
 
         int CreatureId;
         String CreatureName;
+        String CreatureImagePath;
 
         public int Id
         { 
@@ -27,10 +28,17 @@ namespace HybridMobileGame.ViewModels
             set => SetProperty(ref CreatureName, value);
         }
 
+        public String ImagePath
+        {
+            get { return CreatureImagePath; }
+            set => SetProperty(ref CreatureImagePath, value);
+        }
+
         public CreatureViewModel(Creature creature)
         {
             CreatureId = creature.Id;
             CreatureName = creature.Name;
+            CreatureImagePath = creature.ImagePath;
         }
     }
 }
