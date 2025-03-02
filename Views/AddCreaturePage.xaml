@@ -2,15 +2,20 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HybridMobileGame.Views.AddCreaturePage"
+             xmlns:local="clr-namespace:HybridMobileGame.Views"
              Title="Add Creature">
     <VerticalStackLayout>
         <Entry x:Name="entry"
        Placeholder="Enter name"
        TextChanged="entry_TextChanged" 
        Completed="entry_Completed" />
-        
+        <Button Text="Take a picture"
+                Clicked="Photo_Button_Clicked"/>
+        <Image x:Name="PhotoImage" HeightRequest="300" WidthRequest="300" />
         <Button Text="Add creature"
                 Clicked="AddCreatureButton_Clicked" />
-        
+
+        <local:ColorPickerView SelectedColor="{Binding SelectedColor, Mode=TwoWay}"/>
+
     </VerticalStackLayout>
 </ContentPage>

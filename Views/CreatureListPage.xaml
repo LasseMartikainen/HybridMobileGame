@@ -8,11 +8,14 @@
              Title="Creature List"
              BindingContext="{x:Static local:App.MainViewModel}">
     <StackLayout>
-    
-    <Button Text="Add Item"
+        <Button Text="Product details"
+            Clicked="Details_Button_Clicked"/>
+        <Button Text="Add creature"
             Clicked="Add_Button_Clicked"/>
-
-    <ListView ItemsSource="{Binding Creatures}"
+        <Button Text="Save creatures"
+            Clicked="Save_Button_Clicked"/>
+        
+        <ListView ItemsSource="{Binding Creatures}"
               SelectedItem="{Binding SelectedCreature, Mode=OneWayToSource}"
               Margin="10"
               BackgroundColor="DarkMagenta"
@@ -22,8 +25,8 @@
                 <ViewCell x:DataType="vm:CreatureViewModel">
                     <Label Text="{Binding Name}"
                            FontFamily="LPin"
-                           TextColor="White"
-                           FontSize="18" 
+                           TextColor="{Binding Color}"
+                           FontSize="22" 
                            Margin="10"/>
                     <ViewCell.ContextActions>
                         <MenuItem Text="Delete" IsDestructive="True" Clicked="MenuItem_Clicked" />

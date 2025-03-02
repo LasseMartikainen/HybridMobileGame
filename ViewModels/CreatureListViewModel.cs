@@ -33,8 +33,25 @@ namespace HybridMobileGame.ViewModels
             }
         }
 
-        public void DeleteCreature(CreatureViewModel creature) => Creatures.Remove(creature);
+        public void DeleteCreature(CreatureViewModel creature)
+        {
+            //Change the Ids of remaining creatures to avoid duplicates when adding new creatures
+            foreach (var cr in Creatures)
+            {
+                if (cr.Id > creature.Id)
+                {
+                    cr.Id = cr.Id - 1;
+                }
+            }
+
+            Creatures.Remove(creature);
+        }
 
         public void AddCreature(CreatureViewModel newCreature) => Creatures.Add(newCreature);
+
+        public async Task SaveCreatures()
+        {
+            await Models.CreatureDatabase.WriteCreatures(Creatures);
+        }
     }
 }

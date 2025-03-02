@@ -36,4 +36,14 @@ public partial class CreatureListPage : ContentPage
     {
 		await Navigation.PushAsync(new Views.AddCreaturePage());
     }
+
+    private async void Save_Button_Clicked(object sender, EventArgs e)
+    {
+		await App.MainViewModel.SaveCreatures();
+    }
+
+    private async void Details_Button_Clicked(object sender, EventArgs e)
+    {
+        await Navigation.PushAsync(new Views.ProductDetailsPage());
+    }
 }

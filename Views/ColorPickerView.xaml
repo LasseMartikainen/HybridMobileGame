@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentView xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HybridMobileGame.Views.ColorPickerView">
+    <VerticalStackLayout>
+        <StackLayout>
+            <Label Text="Adjust Red" Margin="5" />
+            <Slider x:Name="RedSlider" Minimum="0" Maximum="255" ValueChanged="OnColorChanged" />
+            <Label Text="Adjust Green" Margin="5"/>
+            <Slider x:Name="GreenSlider" Minimum="0" Maximum="255" ValueChanged="OnColorChanged" />
+            <Label Text="Adjust Blue" Margin="5"/>
+            <Slider x:Name="BlueSlider" Minimum="0" Maximum="255" ValueChanged="OnColorChanged" />
+
+            <BoxView x:Name="PreviewBox" HeightRequest="100" WidthRequest="100" />
+        </StackLayout>
+    </VerticalStackLayout>
+</ContentView>

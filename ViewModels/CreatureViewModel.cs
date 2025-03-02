@@ -15,6 +15,7 @@ namespace HybridMobileGame.ViewModels
         int CreatureId;
         String CreatureName;
         String CreatureImagePath;
+        Color CreatureColor;
 
         public int Id
         { 
@@ -34,11 +35,18 @@ namespace HybridMobileGame.ViewModels
             set => SetProperty(ref CreatureImagePath, value);
         }
 
+        public Color Color
+        {
+            get { return CreatureColor; }
+            set => SetProperty(ref CreatureColor, value);
+        }
+
         public CreatureViewModel(Creature creature)
         {
             CreatureId = creature.Id;
             CreatureName = creature.Name;
             CreatureImagePath = creature.ImagePath;
+            CreatureColor = creature.ColorSelection;
         }
     }
 }

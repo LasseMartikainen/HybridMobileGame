@@ -15,5 +15,6 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
         <Image Source="{Binding ImagePath}" />
+        <BoxView x:Name="PreviewBox" HeightRequest="100" WidthRequest="100" Color="{Binding Color}" />
     </VerticalStackLayout>
 </ContentPage>
